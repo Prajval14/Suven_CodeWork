@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Document</title>
+    <style>
+        body{
+        background-color: black;
+      }
+      .header{
+        width: 100%;
+        height: 60px;
+        padding: 10px;
+        font-size: 25px;
+        background: linear-gradient(-45deg, rgb(255, 230, 87), rgb(152, 255, 233), rgb(255, 230, 87), rgb(152, 255, 233));
+        background-size: 200% 200%;
+        animation: gradient 10s ease infinite;
+      }
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+      }
+      li{
+        float: left;
+        padding-left: 50px;
+    
+      }
+      li a {
+          text-decoration: none;
+          color:black;
+      }
+      li a:hover {
+          color: lightslategrey;
+      }
+      .icon{
+        height: 40px;
+        width: 80px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 1px;
+      }
+      .mySlides {
+        display:none;
+        width: 100%;
+        height: 650px;
+      }
+      .w3-content{
+        max-width: 100%;
+      }
+      p {
+        color: white;
+        font-size: 40px;
+        margin-left: 50px;
+        font-size: 30px;
+      }
+      hr{
+        margin-left: 50px;
+        margin-right: 30px;
+        margin-top: -20px;
+      }
+      div.gallery {
+        margin: 5px;
+        float: left;
+        width: 200px;
+      }
+      div.gallery img {
+        width: 100%;
+        height: 200px;
+      }
+      div.desc {
+        text-align: center;
+        color: white;
+        height: 50px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .footer{
+        height: 60px;
+        margin-top: 350px;
+        padding: 10px;
+        background: linear-gradient(-45deg, rgb(255, 230, 87), rgb(152, 255, 233), rgb(255, 230, 87), rgb(152, 255, 233));
+        background-size: 200% 200%;
+        animation: gradient 10s ease infinite;
+      }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <ul>
+          <li>
+            <a href="" id="icon">
+              <img src="365.png" class="icon">
+            </a>
+          </li>
+          <li onclick="myFunction()">
+            <a href="main.html">Movies</a>
+          </li>
+          <li>
+            <a href="#">TV Series</a>
+          </li>
+          <li>
+            <a href="#">Audio</a>
+          </li>
+        </ul>
+      </div>
+    <div class="w3-content w3-display-container">
+        <img class="mySlides" src="https://images.wallpapersden.com/image/download/maze-runner-the-death-cure-movie-poster-2018_a2ZmamaUmZqaraWkpJRnamtlrWZrZWU.jpg">
+        <img class="mySlides" src="https://d2kektcjb0ajja.cloudfront.net/images/posts/feature_images/000/000/072/large-1466557422-feature.jpg?1466557422">
+        <img class="mySlides" src="https://www.microplexnews.com/wp-content/uploads/2020/11/Let-Him-Go-movie-poster-wide.jpg">
+        <img class="mySlides" src="https://images.indianexpress.com/2021/06/F9-1200by667.jpg">
+      
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";  
+        }
+        function myFunction() {
+        alert("As this a HTML CSS task I am not adding much JS since I have less knowledge about it but will gain in the upcoming JS training");
+        }
+    </script>
+    <p>Popular in Action</p>
+    <hr>
+    <div>
+      <div class="gallery" style = "margin-left: 50px;">
+        <a target="_blank" href="">
+          <img src="1.jpg" width="600" height="400">
+        </a>
+        <div class="desc">
+          <b style="font-size: 20px;">After</b>
+          <br>
+          What happens when people die
+        </div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="2.jpg" width="600" height="400">
+        </a>
+        <div class="desc">
+          <b style="font-size: 20px;">Outbreak</b>
+          <br>
+          After Survival
+        </div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="3.jpg" width="600" height="400">
+        </a>
+        <div class="desc">
+          <b style="font-size: 20px;">Lady Fire</b>
+          <br>
+          Potrait of a lady on fire
+        </div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="4.jpg" width="600" height="400">
+        </a>
+        <div class="desc">
+          <b style="font-size: 20px;">AD ASTRA</b>
+          <br>
+          The answers we seek are just outside
+        </div>
+      </div>
+  
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="5.jpg" width="600" height="400">
+        </a>
+        <div class="desc">
+          <b style="font-size: 20px;">The Beach Bum</b>
+          <br>
+          You gotta go low to get high
+        </div>
+      </div>
+  
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="6.jpg" width="600" height="400">
+        </a>
+        <div class="desc">
+          <b style="font-size: 20px;">Glass</b>
+          <br>
+          You cannot contain what you are
+        </div>
+      </div>
+    </div>
+    <p style="margin-top: 350px;">Popular in Drama</p>
+    <hr>
+    <div>
+      <div class="gallery" style = "margin-left: 50px;">
+        <a target="_blank" href="">
+          <img src="7.jpg" width="600" height="400">
+        </a>
+        <div class="desc">
+          <b style="font-size: 20px;">Uncut Gems</b>
+          <br>
+          A safdie brothers film
+        </div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="8.jpg" width="600" height="400">
+        </a>
+        <div class="desc">
+          <b style="font-size: 20px;">Her Smell</b>
+          <br>
+          A brave and rewarding punk epic
+        </div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="9.jpg" width="600" height="400">
+        </a>
+        <div class="desc">
+          <b style="font-size: 20px;">Midsommar</b>
+          <br>
+          Let the festivals begin
+        </div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="10.jpg" width="600" height="400">
+        </a>
+        <div class="desc">
+          <b style="font-size: 20px;">Parasite</b>
+          <br>
+          Act like you own the place
+        </div>
+      </div>
+  
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="11.jpg" width="600" height="400">
+        </a>
+        <div class="desc">
+          <b style="font-size: 20px;">Rick Dalton</b>
+          <br>
+          Uccidimi subito Ringo
+        </div>
+      </div>
+  
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="12.jpeg" width="600" height="400">
+        </a>
+        <div class="desc">
+          <b style="font-size: 20px;">The nightingale</b>
+          <br>
+          Mythic & Gripping
+        </div>
+      </div>
+    </div>
+    <p style="margin-top: 350px;">Popular in Sci-Fi</p>
+    <hr>
+    <div>
+      <div class="gallery" style = "margin-left: 50px;">
+        <a target="_blank" href="">
+          <img src="13.jpeg" width="600" height="400">
+        </a>
+        <div class="desc">
+          <b style="font-size: 20px;">One child nation</b>
+          <br>
+          The truth beyond the propaganda
+        </div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="14.jpg" width="600" height="400">
+        </a>
+        <div class="desc">
+          <b style="font-size: 20px;">The mountain</b>
+          <br>
+          A psychosurgical odyssey
+        </div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="15.jpg" width="600" height="400">
+        </a>
+        <div class="desc">
+          <b style="font-size: 20px;">Joker</b>
+          <br>
+          Put on a happy face
+        </div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="16.jpg" width="600" height="400">
+        </a>
+        <div class="desc">
+          <b style="font-size: 20px;">Transit</b>
+          <br>
+          Casablanca as written by kafka
+        </div>
+      </div>
+  
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="17.jpg" width="600" height="400">
+        </a>
+        <div class="desc">
+          <b style="font-size: 20px;">Us</b>
+          <br>
+          A new nightmare from the mind 
+        </div>
+      </div>
+  
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="18.jpg" width="600" height="400">
+        </a>
+        <div class="desc">
+          <b style="font-size: 20px;">WW84</b>
+          <br>
+          Wonder Woman 84
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <img src="365.png" class="icon" style="margin-left: 30px; margin-right: 20px;">
+      Powered by 365 Entertainment Portal 2019. All Rights Reserved.
+    </div>
+</body>
+</html>
+
+
